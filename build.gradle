@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group = 'com.codegym'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Spring MVC 6 cho Tomcat 11
+    implementation 'org.springframework:spring-webmvc:6.1.5'
+
+    // Jakarta Servlet & JSTL
+    providedCompile 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+    implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0'
+    implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1'
+}
+
+test {
+    useJUnitPlatform()
+}
